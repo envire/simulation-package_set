@@ -1,9 +1,10 @@
---- ode/src/Makefile.am	Fri Jul 11 08:16:50 2008
-+++ ode/src/Makefile.am	Wed Aug  8 08:43:51 2012
-@@ -14,6 +14,13 @@
- libode_la_LDFLAGS = @EXTRA_LIBTOOL_LDFLAGS@ @ODE_VERSION_INFO@
- libode_la_LIBADD = libfast.la joints/libjoints.la
+--- ode/src/Makefile.am	2014-02-04 07:00:58.000000000 +0100
++++ ode/ode/src/Makefile.am	2016-01-25 13:14:51.545768600 +0100
+@@ -8,7 +8,13 @@
+ noinst_LTLIBRARIES = libfast.la
+ libfast_la_SOURCES = fastldlt.c fastltsolve.c fastdot.c fastlsolve.c
  
+-
 +# to create child classes of dJoint, we need to make more of
 +# the internal data structures accessible.
 +libode_la_includedir = $(includedir)/ode-internals
@@ -12,11 +13,11 @@
 +			obstack.h \
 +			config.h
  
- # please, let's keep the filenames sorted
- libode_la_SOURCES =     array.cpp array.h \
---- ode/src/joints/Makefile.am	Wed Jun  4 23:47:13 2008
-+++ ode/ode/src/joints/Makefile.am	Wed Aug  8 08:43:51 2012
-@@ -2,6 +2,9 @@
+ lib_LTLIBRARIES = libode.la
+ 
+--- ode/src/joints/Makefile.am	2014-02-04 07:00:58.000000000 +0100
++++ ode/src/joints/Makefile.am	2016-01-25 13:14:51.949768584 +0100
+@@ -4,6 +4,9 @@
  
  noinst_LTLIBRARIES = libjoints.la
  
@@ -26,3 +27,4 @@
  libjoints_la_SOURCES =  joints.h \
                          joint.h joint.cpp \
                          joint_internal.h \
+ 

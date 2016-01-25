@@ -1,0 +1,38 @@
+--- ode/src/error.cpp	2014-02-04 07:00:58.000000000 +0100
++++ ode/src/error.cpp	2016-01-25 13:14:51.437768604 +0100
+@@ -90,7 +90,8 @@
+     if (error_function) error_function (num,msg,ap);
+     else printMessage (num,"ODE Error",msg,ap);
+     va_end (ap);
+-    exit (1);
++    if (!error_function)
++    exit (1);    
+ }
+ 
+ 
+@@ -102,6 +103,7 @@
+     else printMessage (num,"ODE INTERNAL ERROR",msg,ap);
+     va_end (ap);
+     // *((char *)0) = 0;   ... commit SEGVicide
++    if (!debug_function)
+     abort();
+ }
+ 
+@@ -145,6 +147,7 @@
+         MessageBox(0,s,title,MB_OK | MB_ICONWARNING);
+     }
+     va_end (ap);
++    if (!error_function)
+     exit (1);
+ }
+ 
+@@ -162,7 +165,8 @@
+         MessageBox(0,s,title,MB_OK | MB_ICONSTOP);
+     }
+     va_end (ap);
+-    abort();
+++   if (!debug_function)
+++   abort();
+ }
+ 
+ 

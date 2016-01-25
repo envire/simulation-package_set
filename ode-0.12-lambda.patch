@@ -1,8 +1,0 @@
---- include/ode/common.h	Mon Jun  2 23:09:37 2008
-+++ include/ode/common.h	Wed Aug  8 08:43:51 2012
-@@ -370,6 +370,7 @@
-   dVector3 t1;		/* torque applied to body 1 */
-   dVector3 f2;		/* force applied to body 2 */
-   dVector3 t2;		/* torque applied to body 2 */
-+  dReal lambda;
- } dJointFeedback;

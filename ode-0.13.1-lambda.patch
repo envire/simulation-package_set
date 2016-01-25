@@ -1,0 +1,22 @@
+--- include/ode/common.h	2014-02-27 21:42:09.000000000 +0100
++++ include/ode/common.h	2016-01-25 13:14:50.297768650 +0100
+@@ -337,6 +337,7 @@
+   dVector3 t1;		/* torque applied to body 1 */
+   dVector3 f2;		/* force applied to body 2 */
+   dVector3 t2;		/* torque applied to body 2 */
++  dReal lambda;
+ } dJointFeedback;
+ 
+--- ode/src/step.cpp	2014-03-05 17:05:14.000000000 +0100
++++ ode/ode/src/step.cpp	2016-01-25 13:14:51.665768595 +0100
+@@ -1293,8 +1293,9 @@
+                         cf2[2] += (fb->f2[2] = data[2]);
+                         cf2[4] += (fb->t2[0] = data[4]);
+                         cf2[5] += (fb->t2[1] = data[5]);
+-                        cf2[6] += (fb->t2[2] = data[6]);
++                        cf2[6] += (fb->t2[2] = data[6]);                        
+                     }
++                    fb->lambda = *(lambdarow+5);
+                 }
+                 else {
+                     // no feedback is required, let's compute cforce the faster way
