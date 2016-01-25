@@ -1,5 +1,5 @@
---- ode/src/Makefile.am	2014-02-04 07:00:58.000000000 +0100
-+++ ode/ode/src/Makefile.am	2016-01-25 13:14:51.545768600 +0100
+--- ode/src/Makefile.am	Fri Jul 11 08:16:50 2008
++++ ode/src/Makefile.am	Wed Aug  8 08:43:51 2012
 @@ -8,7 +8,13 @@
  noinst_LTLIBRARIES = libfast.la
  libfast_la_SOURCES = fastldlt.c fastltsolve.c fastdot.c fastlsolve.c
@@ -15,8 +15,8 @@
  
  lib_LTLIBRARIES = libode.la
  
---- ode/src/joints/Makefile.am	2014-02-04 07:00:58.000000000 +0100
-+++ ode/src/joints/Makefile.am	2016-01-25 13:14:51.949768584 +0100
+--- ode/src/joints/Makefile.am	Wed Jun  4 23:47:13 2008
++++ ode/ode/src/joints/Makefile.am	Wed Aug  8 08:43:51 2012
 @@ -4,6 +4,9 @@
  
  noinst_LTLIBRARIES = libjoints.la
