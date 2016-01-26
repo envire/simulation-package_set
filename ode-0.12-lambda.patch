@@ -7,6 +7,7 @@
 +  dReal lambda;
  } dJointFeedback;
  
+ 
 --- ode/src/step.cpp	Thu Jul 24 22:18:40 2008
 +++ ode/src/step.cpp	Mon Oct 15 12:58:57 2012
 @@ -1293,8 +1293,9 @@

@@ -35,11 +35,11 @@ version_control:
       url: http://bitbucket.org/odedevs/ode/downloads/ode-0.13.1.tar.gz
       patches: 
       #WARNING, DO NOT CHANGE THE ORDER OF THE PATCHES
-        - $AUTOPROJ_SOURCE_DIR/ode-0.12-va_end.patch
-        - $AUTOPROJ_SOURCE_DIR/ode-0.12-lambda.patch
-        - $AUTOPROJ_SOURCE_DIR/ode-0.12-export_joint_internals.patch
-        - $AUTOPROJ_SOURCE_DIR/ode-0.12-abort.patch
-        - $AUTOPROJ_SOURCE_DIR/ode-0.12-osx.patch
+        #- $AUTOPROJ_SOURCE_DIR/ode-0.12-va_end.patch
+        - $AUTOPROJ_SOURCE_DIR/ode-0.13.1-lambda.patch
+        - $AUTOPROJ_SOURCE_DIR/ode-0.13.1-export_joint_internals.patch
+        - $AUTOPROJ_SOURCE_DIR/ode-0.13.1-abort.patch
+        #- $AUTOPROJ_SOURCE_DIR/ode-0.12-osx.patch
       update_cached_file: false
 
     - external/minizip:

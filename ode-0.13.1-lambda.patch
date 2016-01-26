@@ -6,6 +6,7 @@
    dVector3 t2;		/* torque applied to body 2 */
 +  dReal lambda;
  } dJointFeedback;
+
  
 --- ode/src/step.cpp	2014-03-05 17:05:14.000000000 +0100
 +++ ode/src/step.cpp	2016-01-25 13:14:51.665768595 +0100
