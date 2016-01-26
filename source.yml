@@ -31,8 +31,8 @@ version_control:
 
     - simulation/ode:
       type: archive
-      #url: http://freefr.dl.sourceforge.net/project/opende/ODE/0.12/ode-0.12.tar.bz2
-      url: http://bitbucket.org/odedevs/ode/downloads/ode-0.13.1.tar.gz
+      url: http://freefr.dl.sourceforge.net/project/opende/ODE/0.12/ode-0.12.tar.bz2
+      #url: http://bitbucket.org/odedevs/ode/downloads/ode-0.13.1.tar.gz
       patches: 
       #WARNING, DO NOT CHANGE THE ORDER OF THE PATCHES
         #- $AUTOPROJ_SOURCE_DIR/ode-0.12-va_end.patch
